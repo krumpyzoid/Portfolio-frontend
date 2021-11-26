@@ -1047,7 +1047,7 @@ button {
   padding: 0;
   bottom: 1em;
   right: 1.5em;
-  animation: btnslide 1s;
+  animation: btnslide 0s;
   width: 3em;
   height: 3em;
   z-index: 10000;
