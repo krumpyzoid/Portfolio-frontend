@@ -1,6 +1,6 @@
 import axios from "axios"
 import authHeader from "./auth-header"
-const API_URL = 'http://localhost:5000/api/messages/'
+const API_URL = 'http://localhost:1337/messages/'
 
 class MessageService {
     getAll() {
@@ -20,6 +20,12 @@ class MessageService {
             .then(res => {
                 return res.data
             });
+    }
+    sendOne(newmessage) {
+        return axios.post(API_URL, newmessage)
+            .then(res => {
+                return res.status
+            })
     }
 }
 

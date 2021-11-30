@@ -129,6 +129,8 @@ $text-secondary: #18191F;
       filter: grayscale(50%);
     }
     &:hover {
+      box-shadow: 0.5em 0.5em 2em 1em rgba(0, 0, 0, 0.1),
+                  0.3em 0.3em 1em 0em rgba(0, 0, 0, 0.25);
       &:after {
         opacity: 0;
       }

@@ -13,6 +13,36 @@
       width="50" height="50"
       viewBox="0 0 172 172"
       style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M49.5575,44.72l-4.8375,4.8375l36.55,36.4425l-36.55,36.4425l4.8375,4.8375l36.6575,-36.4425l36.55,36.4425l4.8375,-4.8375l-36.55,-36.4425l36.55,-36.4425l-4.8375,-4.8375l-36.55,36.4425z"></path></g></g></svg>
+  <div class="contact__form-wrapper">
+    <Form class="contact__form" @submit="sendMessage">
+      <h1>Me contacter</h1>
+      <div class="contact__form-row">
+        <div class="form-input">
+          <label for="name">Nom</label>
+          <Field type="text" name="name" :rules="validateText" />
+          <ErrorMessage name="name" />
+        </div>
+        <div class="form-input">
+          <label for="email">E-mail</label>
+          <Field type="email" name="email" :rules="validateEmail"/>
+          <ErrorMessage name="email" />
+        </div>
+        <div class="form-input">
+          <label for="email">Téléphone</label>
+          <Field type="text" name="phone" :rules="validatePhone"/>
+          <ErrorMessage name="phone" />
+        </div>
+      </div>
+      <div class="form-input">
+          <label for="message">Message</label>
+          <Field type="textarea" name="message" v-slot="{field}" :rules="validateText">
+            <textarea v-bind="field"></textarea>
+          </Field>
+          <ErrorMessage name="message" />
+      </div>
+      <button class="btn">Envoyer</button>
+    </Form>
+  </div>
 </div>
 <section id="hero">
   <div class="container row align-center">
@@ -28,13 +58,13 @@
           <span v-else><img class="hero__arrow" src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMjYuMDI1IDE0LjQ5NmwtMTQuMjg2LS4wMDEgNi4zNjYtNi4zNjZMMTUuOTc5IDYgNS45NzUgMTYuMDAzIDE1Ljk3MSAyNmwyLjEyOS0yLjEyOS02LjM2Ny02LjM2NmgxNC4yOXoiLz48L3N2Zz4='/></span>
         </button>
         <button aria-label="E-mail" class="hero__button hero__button--mail">
-          <img style="height: 15px; width: auto" src="../assets/mailico.svg" alt="">
+          <img style="height: 24px; width: auto" src="../assets/icons8-mail.png" alt="">
         </button>
         <button aria-label="Formulaire" class="hero__button hero__button--form" @click="openContactForm()">
-          <img style="height: 22px; width: auto" src="../assets/formico.svg" alt="">
+          <img style="height: 30px; width: auto" src="../assets/icons8-form.png" alt="">
         </button>
         <button aria-label="Téléphone" class="hero__button hero__button--phone">
-          <img style="height: 22px; width: auto" src="../assets/phone.svg" alt="">
+          <img style="height: 30px; width: auto" src="../assets/icons8-phone.png" alt="">
         </button>
       </div>
         <div class="contact__button button--free" :class="{'button--fixed': get_scroll_position()>=btnheight}">
@@ -43,13 +73,13 @@
             <span v-else><img class="hero__arrow" src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMjYuMDI1IDE0LjQ5NmwtMTQuMjg2LS4wMDEgNi4zNjYtNi4zNjZMMTUuOTc5IDYgNS45NzUgMTYuMDAzIDE1Ljk3MSAyNmwyLjEyOS0yLjEyOS02LjM2Ny02LjM2NmgxNC4yOXoiLz48L3N2Zz4='/></span>
           </div>
           <div class="button-fixed__mail">
-            <img style="height: 15px; width: auto" src="../assets/mailico.svg" alt="">
+            <img style="height: 24px; width: auto" src="../assets/icons8-mail.png" alt="">
           </div>
           <div class="button-fixed__form" @click="openContactForm()">
-            <img style="height: 22px; width: auto" src="../assets/formico.svg" alt="">
+            <img style="height: 30px; width: auto" src="../assets/icons8-form.png" alt="">
           </div>
           <div class="button-fixed__phone">
-            <img style="height: 22px; width: auto" src="../assets/phone.svg" alt="">
+            <img style="height: 30px; width: auto" src="../assets/icons8-phone.png" alt="">
           </div>
         </div>
       
@@ -270,12 +300,11 @@
 </section>
 <section id="footer">
   <ul class="socialmedias__list2 icofont-ul">
-    <li><a href="mailto:hello@krumpy.studio"><span class="icofont-ui-email"></span></a></li>
     <li><a href="http://github.com/krumpyzoid"><span class="icofont-github"></span></a></li>
     <li><a href="http://instagram.com/krumpy.studio"><span class="icofont-instagram"></span></a></li>
     <li><a href="http://facebook.com/krumpy.studio"><span class="icofont-facebook"></span></a></li>
   </ul>
-  <p class="footer__copyright">Designed and coded by <a href="mailto:hello@krumpy.studio">krumpy.studio</a></p>
+  <p class="footer__copyright">Designed and coded by <a href="mailto:hello@evankurz.me">Evan Kurz</a></p>
 </section>
 <div id="sentsuccessfully"><p>Message envoyé avec succès !</p></div>
 </template>
@@ -285,17 +314,13 @@
 import Torus from '../components/Torus.vue'
 import PortfolioItem from '../components/PortfolioItem.vue'
 import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks} from 'body-scroll-lock';
+import MessageService from '../services/message.service.js'
+import { Form, Field, ErrorMessage } from 'vee-validate';
 
 export default {
   
   data() {
     return {
-      message: {
-        name: '',
-        email: '',
-        message: '',
-        phone: ''
-      },
       scrollPosition: 0,
       btnheight: 30000,
       heroButtonsShown: false,
@@ -366,6 +391,51 @@ export default {
     closeContactForm() {
       this.modalActive = false;
       enableBodyScroll(document.querySelector('body'))
+    },
+    sendMessage(values) {
+      MessageService.sendOne(values)
+        .then(res => {if (res == 200) {
+          this.toggleMessage()
+        }})
+    },
+    validateEmail(value) {
+      // if the field is empty
+      if (!value) {
+        return 'Ce champ est requis';
+      }
+      // if the field is not a valid email
+      const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+      if (!regex.test(value)) {
+        return 'Email valide requise: utilisateur@domaine.ext';
+      }
+      // All is good
+      return true;
+    },
+    validateText(value) {
+      // if the field is empty
+      if (!value) {
+        return 'Ce champ est requis';
+      }
+      // must contain only letter
+      const regex = /^[a-zA-Z0-9/ ]*$/;
+      if (!regex.test(value)) {
+        return 'Un ou plusieurs caractères sont interdit(s)';
+      }
+      // All is good
+      return true;
+    },
+    validatePhone(value) {
+      // if the field is empty
+      if (value == '') {
+        return true;
+      }
+      // must contain only letter
+      const regex = /^[0-9]{10}$/g;
+      if (!regex.test(value)) {
+        return 'Numéro de téléphone 10 chiffres';
+      }
+      // All is good
+      return true;
     }
   },
   mounted() {
@@ -375,7 +445,10 @@ export default {
   },
   components: {
     Torus,
-    PortfolioItem
+    PortfolioItem,
+    Field,
+    Form,
+    ErrorMessage
   }
 }
 </script>
@@ -483,7 +556,7 @@ body {
     text-transform: uppercase;
   }
   h1 {
-    margin-bottom: 0.2em;
+    margin-bottom: 0;
     font-weight: 900;
   }
   h2 {
@@ -844,6 +917,71 @@ body {
   }
 }
 
+/* CONTACT FORM */
+.contact__form-wrapper {
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  h1 {
+    color: $bg;
+    margin-bottom: 0;
+    font-weight: 1000;
+  }
+  label {
+    color: $bg;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    margin-left: 0.2em;
+  }
+  button {
+    margin: 2em auto;
+  }
+  input, textarea {
+    background-color: $bg;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    &:focus, &:active {
+      outline: none;
+      box-shadow: 0 0 0 2px inset $text-main;
+    }
+  }
+  textarea {
+    min-height: 8em;
+  }
+}
+.contact__form-row {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 1em;
+  margin-bottom: 1em;
+}
+.form-input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  input {
+    width: 100%;
+  }
+  span {
+    color: rgb(214, 3, 66);
+    font-size: 0.7em;
+  }
+}
+
 #footer {
   margin-top: 5em;
   display: flex;
@@ -860,6 +998,7 @@ body {
   }
 }
 .footer__socialmedias {
+  z-index: 1000000;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -962,6 +1101,7 @@ button {
   margin-top: 2em;
   cursor: pointer;
   transition: 0.2s;
+  background-color: $bg;
 }
 
 .btn-accent {
@@ -1011,7 +1151,7 @@ button {
 
 #sentsuccessfully {
   display: none;
-  z-index: 10000;
+  z-index: 100000000000000000;
   position: fixed;
   top: 0;
   width: 100%;
