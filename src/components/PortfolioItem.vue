@@ -12,7 +12,7 @@
     </div>
     </div>
     <div class="portfolio__item-picture" @click="openModal()" style="cursor: pointer">
-    <img v-if="item.preview" :src="'http://localhost:1337' + item.preview.url" alt="">
+    <img v-if="item.preview" :src="'https://evankurz-personal-website.herokuapp.com/' + item.preview.url" alt="">
     </div>
     
 </div>
