@@ -87,65 +87,10 @@
     <div class="hero__torus">
       <Torus />
     </div>
-    <!-- <div class="hero__torus">
-      <iframe src='https://my.spline.design/untitled-7b296d3389f302085547d7d503900d00/' frameborder='0' width='100%' height='100%'></iframe>
-    </div> -->
+
   </div>
 </section>
-<!-- <section id="profile">
-  <div class="container" data-aos="fade-left"> 
-    <h1 class="section-title"><span class="number">01. </span>Je suis un Développeur Web</h1>
-    <p class="section-subtitle">Lorem ipsum is common placeholder text used to demonstrate the graphic elements of a document or visual presentation.</p>
-    <div class="profile">
-      <div class="profile__picture">
-        <img src="../assets/undraw_Designer_re_5v95.svg" alt="">
-      </div>
-      <div class="profile__description">
-      </div>
-    </div>
-  </div>
-</section> -->
-<!-- <section id="testimonials">
-  <div class="container">
-    <img src="../assets/ball2.png" alt="" id="ball2">
-    <img src="../assets/ball3.png" alt="" id="ball3">
-    <h1>Ce qu'ils disent de moi</h1>
-    <div class="testimonials__messages">
-      <div class="testimonials__grid">
-        <div class="testimonials__message">
-          <div class="testimonials__bubble">
-            <h2>Titre du message</h2>
-            <p>We had an incredible experience working with Landify and were impressed they made such a big difference in only three weeks. Our team is so grateful for the wonderful improvements they made and their ability to get familiar with the concept so quickly. It acted as a catalyst to take our design to the next level and get more eyes on our product.</p>
-          </div>
-          <div class="testimonials__author">
-            <div class="testimonials__author__picture img--circle">
-              <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="">
-            </div>
-            <div class="testimonials__author__descrption">
-              <h2>Jane cooper</h2>
-              <p>CEO, ABC Corporation</p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonials__message">
-          <div class="testimonials__bubble">
-            <h2>Titre du message</h2>
-            <p>We had an incredible experience working with Landify and were impressed they made such a big difference in only three weeks. Our team is so grateful for the wonderful improvements they made and their ability to get familiar with the concept so quickly. It acted as a catalyst to take our design to the next level and get more eyes on our product.</p>
-          </div>
-          <div class="testimonials__author">
-            <div class="testimonials__author__picture img--circle">
-              <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="">
-            </div>
-            <div class="testimonials__author__descrption">
-              <h2>Jane cooper</h2>
-              <p>CEO, ABC Corporation</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
+
 <section id="workflow" >
   <div class="container" >
     <h1 class="section-title" data-aos="fade-right"><span class="number">01. </span>Votre projet, entre de bonnes mains</h1>
