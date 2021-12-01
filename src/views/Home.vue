@@ -460,7 +460,7 @@ body {
   overflow-x: hidden;
 }
 #hero {
-  height: 100vh;
+  min-height: 100vh;
   .container {
     position: relative;
   }
