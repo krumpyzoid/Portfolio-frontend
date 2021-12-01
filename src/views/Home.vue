@@ -501,7 +501,7 @@ body {
   }
 }
 .hero__torus {
-  z-index: 1;
+  z-index: -1;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
