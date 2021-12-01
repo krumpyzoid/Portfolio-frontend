@@ -1,10 +1,9 @@
 <template>
 <div class="footer__socialmedias">
         <ul class="socialmedias__list icofont-ul">
-          <li><a href="mailto:hello@krumpy.studio"><span class="icofont-ui-email"></span></a></li>
+          <li><a href="mailto:hello@evankurz.com"><span class="icofont-ui-email"></span></a></li>
           <li><a href="http://github.com/krumpyzoid"><span class="icofont-github"></span></a></li>
-          <li><a href="http://instagram.com/krumpy.studio"><span class="icofont-instagram"></span></a></li>
-          <li><a href="http://facebook.com/krumpy.studio"><span class="icofont-facebook"></span></a></li>
+          <li><a href="https://www.facebook.com/mskurz/"><span class="icofont-facebook"></span></a></li>
         </ul>
         <span class="socialmedias__line"></span>
 </div>
@@ -216,9 +215,9 @@
 </section>
 <section id="footer">
   <ul class="socialmedias__list2 icofont-ul">
+    <li><a href="mailto:hello@evankurz.com"><span class="icofont-ui-email"></span></a></li>
     <li><a href="http://github.com/krumpyzoid"><span class="icofont-github"></span></a></li>
-    <li><a href="http://instagram.com/krumpy.studio"><span class="icofont-instagram"></span></a></li>
-    <li><a href="http://facebook.com/krumpy.studio"><span class="icofont-facebook"></span></a></li>
+    <li><a href="https://www.facebook.com/mskurz/"><span class="icofont-facebook"></span></a></li>
   </ul>
   <p class="footer__copyright">Designed and coded by <a href="mailto:hello@evankurz.me">Evan Kurz</a></p>
 </section>
