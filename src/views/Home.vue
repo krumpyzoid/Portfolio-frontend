@@ -460,13 +460,12 @@ body {
   overflow-x: hidden;
 }
 #hero {
-  min-height: 100vh;
   .container {
     position: relative;
   }
 }
 .hero__logo {
-  height: 100%;
+  min-height: 100vh;
   z-index: 2;
   display: flex;
   flex-direction: column;
