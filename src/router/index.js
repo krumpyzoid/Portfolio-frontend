@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Admin from '../views/Admin.vue'
 import Messages from '../views/Messages.vue'
-import Testimonials from '../views/Testimonials.vue'
 
 const routes = [
   {
@@ -40,21 +39,6 @@ const routes = [
         path: 'messages/:id',
         name: 'ViewMessage',
         component: () => import('../views/ViewMessage.vue')
-      },
-      {
-        path: 'testimonials',
-        name: 'Testimonials',
-        component: Testimonials,
-      },
-      {
-        path: 'testimonials/:id/edit',
-        name: 'EditTestimonial',
-        component: () => import('../views/Testimonial.vue')
-      },
-      {
-        path: 'testimonials/new',
-        name: 'NewTestimonial',
-        component: () => import('../views/Testimonial.vue')
       }
     ]
   }

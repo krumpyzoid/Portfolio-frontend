@@ -406,7 +406,15 @@ p {
 body {
   background-color: $bg;
 }
+::-webkit-scrollbar {
+  width: 3px;
+  height: 20px;
+}
 
+::-webkit-scrollbar-thumb {
+  background: $bg-dk;
+  background-clip: padding-box;
+}
 .section-title {
   font-size: 2em;
   margin-bottom: 0.2em;
@@ -429,13 +437,13 @@ section:nth-of-type(2n + 1) {
 
 .container {
   max-width: 1400px;
-  padding: 0 6em;
+  padding: 0 6em 0 6em;
   width: 100%;
   margin: 0 auto;
   position: relative;
   height: 100%;
   @media (max-width: 1000px) {
-    padding: 0 2em;
+    padding: 0 2em 0 2em;
   }
 }
 
