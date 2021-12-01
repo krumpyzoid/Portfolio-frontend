@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const API_URL = 'http://localhost:1337/auth/'
+const API_URL = 'https://evankurz-personal-website.herokuapp.com/'
 
 class AuthService {
     login(user) {
