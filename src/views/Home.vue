@@ -175,36 +175,7 @@
     </div>
   </div>
 </section>
-<!-- <section id="technologies">
-  <div class="row">
-    <div class="technologies__element">
-      <img src="../assets/techno_html5.svg" alt="">
-      <h2>HTML5</h2>
-      <p>⭐⭐⭐</p>
-    </div>
-    <div class="technologies__element">
-      <img src="../assets/techno_css3.svg" alt="">
-    </div>
-    <div class="technologies__element">
-      <img src="../assets/techno_javascript.svg" alt="">
-    </div>
-    <div class="technologies__element">
-      <img src="../assets/techno_sass.svg" alt="">
-    </div>
-    <div class="technologies__element">
-      <img src="../assets/techno_reactjs.svg" alt="">
-    </div>
-    <div class="technologies__element">
-      <img src="../assets/techno_vuejs.svg" alt="">
-    </div>
-    <div class="technologies__element">
-      <img src="../assets/techno_nodejs.svg" alt="">
-    </div>
-    <div class="technologies__element">
-      <img src="../assets/techno_mongodb.svg" alt="">
-    </div>
-  </div>
-</section> -->
+
 <section id="services">
   <div class="container" >
     <h1 class="section-title" data-aos="fade-right"><span class="number">03. </span>Mes prestations</h1>
@@ -488,6 +459,7 @@ body {
   }
 }
 .hero__logo {
+  height: 100%;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -512,6 +484,7 @@ body {
     font-size: 1em;
   }
   h1, h2, h3, p {
+    padding: 5px;
     background: $bg;
   }
   .btn {
