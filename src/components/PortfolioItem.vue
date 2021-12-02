@@ -12,7 +12,7 @@
     </div>
     </div>
     <div class="portfolio__item-picture" @click="openModal()" style="cursor: pointer">
-    <img v-if="item.preview" :src="item.imgurl" alt="">
+    <img :src="item.imgurl" alt="">
     </div>
     
 </div>
