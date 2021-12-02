@@ -56,7 +56,7 @@
           <span v-if="!heroButtonsShownText" class="animate__opacityin">me contacter</span>
           <span v-else><img class="hero__arrow" src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMjYuMDI1IDE0LjQ5NmwtMTQuMjg2LS4wMDEgNi4zNjYtNi4zNjZMMTUuOTc5IDYgNS45NzUgMTYuMDAzIDE1Ljk3MSAyNmwyLjEyOS0yLjEyOS02LjM2Ny02LjM2NmgxNC4yOXoiLz48L3N2Zz4='/></span>
         </button>
-        <button aria-label="E-mail" class="hero__button hero__button--mail">
+        <button aria-label="E-mail" class="hero__button hero__button--mail" @click="goToMail()">
           <img style="height: 24px; width: auto" src="../assets/icons8-mail.png" alt="">
         </button>
         <button aria-label="Formulaire" class="hero__button hero__button--form" @click="openContactForm()">
@@ -71,7 +71,7 @@
             <span v-if="!fixedButtonActiveIcon" class="animate__opacityin"><img style="height: 22px; width: auto" src="../assets/talkico.svg" alt=""></span>
             <span v-else><img class="hero__arrow" src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMjYuMDI1IDE0LjQ5NmwtMTQuMjg2LS4wMDEgNi4zNjYtNi4zNjZMMTUuOTc5IDYgNS45NzUgMTYuMDAzIDE1Ljk3MSAyNmwyLjEyOS0yLjEyOS02LjM2Ny02LjM2NmgxNC4yOXoiLz48L3N2Zz4='/></span>
           </div>
-          <div class="button-fixed__mail">
+          <div class="button-fixed__mail" @click="goToMail()">
             <img style="height: 24px; width: auto" src="../assets/icons8-mail.png" alt="">
           </div>
           <div class="button-fixed__form" @click="openContactForm()">
@@ -298,6 +298,9 @@ export default {
         this.fixedButtonActive = false;
         this.fixedButtonActiveIcon = false;
       }
+    },
+    goToMail() {
+      window.location = "mailto:hello@evankurz.com"
     },
     openContactForm() {
       this.modalActive = true;
