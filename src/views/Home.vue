@@ -68,7 +68,7 @@
       </div>
         <div class="contact__button button--free" :class="{'button--fixed': get_scroll_position()>=btnheight}">
           <div class="button-fixed__button animate__pulse" @click="fixedContactAnimation()">
-            <span v-if="!fixedButtonActiveIcon" class="animate__opacityin"><img style="height: 22px; width: auto" src="../assets/talkico.svg" alt=""></span>
+            <span v-if="!fixedButtonActiveIcon" class="animate__opacityin"><img style="height: 32px; width: auto; margin-top: 3px;" src="../assets/icons8-talk.png" alt=""></span>
             <span v-else><img class="hero__arrow" src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMjYuMDI1IDE0LjQ5NmwtMTQuMjg2LS4wMDEgNi4zNjYtNi4zNjZMMTUuOTc5IDYgNS45NzUgMTYuMDAzIDE1Ljk3MSAyNmwyLjEyOS0yLjEyOS02LjM2Ny02LjM2NmgxNC4yOXoiLz48L3N2Zz4='/></span>
           </div>
           <div class="button-fixed__mail" @click="goToMail()">
