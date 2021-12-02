@@ -93,7 +93,7 @@
 <section id="workflow" >
   <div class="container" >
     <h1 class="section-title" data-aos="fade-right"><span class="number">01. </span>Votre projet, entre de bonnes mains</h1>
-    <p class="section-subtitle" data-aos="fade-right" data-aos-delay="100" data-aos-anchor="#workflow">Lorem ipsum is common placeholder text used to demonstrate the graphic elements of a document or visual presentation.</p>
+    <p class="section-subtitle" data-aos="fade-right" data-aos-delay="100" data-aos-anchor="#workflow">Communication et adaptation, les pilliers pour un accompagnement répondant à tous vos besoins.</p>
     <div class="workflow__graph">
       <span class="workflow__line" style="z-index:-1;" data-aos="fade-right" data-aos-delay="800" data-aos-anchor="#workflow"></span>
       <div class="workflow__grid">
@@ -139,7 +139,7 @@
 <section id="features">
   <div class="container">
     <h1 class="section-title" data-aos="fade-left" data-aos-anchor="#features"><span class="number">02. </span>Un résultat prêt pour l'avenir</h1>
-    <p class="section-subtitle" data-aos="fade-left" data-aos-delay="100"  data-aos-anchor="#features">Lorem ipsum is common placeholder text used to demonstrate the graphic elements of a document or visual presentation.</p>
+    <p class="section-subtitle" data-aos="fade-left" data-aos-delay="100"  data-aos-anchor="#features">Des fondations solides assurent un dévelopement efficace et un projet prêt à évoluer dans le temps.</p>
     <div class="features__grid">
       <div class="features__card" data-aos="fade-left" data-aos-delay="100" data-aos-anchor="#features">
         <img src="../assets/features_icons/01.svg" alt="">
@@ -178,7 +178,7 @@
 <section id="services">
   <div class="container" >
     <h1 class="section-title" data-aos="fade-right"><span class="number">03. </span>Mes prestations</h1>
-    <p class="section-subtitle" data-aos="fade-right" data-aos-delay="100" data-aos-anchor="#services" >Lorem ipsum is common placeholder text used to demonstrate the graphic elements of a document or visual presentation.</p>
+    <p class="section-subtitle" data-aos="fade-right" data-aos-delay="100" data-aos-anchor="#services" >Pour chaque besoin il existe une solution adaptée</p>
     <div class="services__grid">
       <div class="services__card" data-aos="fade-right" data-aos-delay="100" data-aos-anchor="#services">
         <div>
@@ -207,7 +207,7 @@
 <section id="portfolio" >
   <div class="container">
     <h1 class="section-title" data-aos="fade-left" data-aos-anchor="#portfolio"><span class="number">04. </span>Mes dernières créations</h1>
-    <p class="section-subtitle" data-aos="fade-left" data-aos-delay="100" data-aos-anchor="#portfolio">Sélection de mes projets les plus récents et pertinents.</p>
+    <p class="section-subtitle" data-aos="fade-left" data-aos-delay="100" data-aos-anchor="#portfolio">Découvrez mon travail et les raisons derrière chaque choix en cliquant sur les images.</p>
     <div class="portfolio">
       <PortfolioItem v-for="id in 3" v-bind:key="id" v-bind:order="id" />
     </div>
