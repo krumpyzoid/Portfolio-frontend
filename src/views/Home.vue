@@ -230,7 +230,6 @@ import Torus from '../components/Torus.vue'
 import PortfolioItem from '../components/PortfolioItem.vue'
 import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks} from 'body-scroll-lock';
 import MessageService from '../services/message.service.js'
-import { Form, Field, ErrorMessage } from 'vee-validate';
 
 export default {
   
@@ -360,13 +359,6 @@ export default {
     this.btnheight = this.$refs.contactb.getBoundingClientRect().top
     this.btnrightvalue = this.$refs.contactb.getBoundingClientRect().right
     this.$refs.contactb.style.right = this.btnrightvalue + ' px'
-  },
-  components: {
-    Torus,
-    PortfolioItem,
-    Field,
-    Form,
-    ErrorMessage
   }
 }
 </script>
