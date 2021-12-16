@@ -47,19 +47,11 @@ export default {
     data() {
         return {
             modalActive: false,
-            item: {
-                overline: '',
-                heading: '',
-                tags: '',
-                preview: null,
-                description: '',
-                casestudy: ''
-            }
         }
     },
     props: {
         key: Number,
-        order: Number
+        item: Object
     },
     methods: {
         openModal() {
@@ -73,10 +65,10 @@ export default {
     },
     mounted() {
         console.log(this.order)
-        PortfolioItemService.getAllFiltered('?order=' + this.order)
+        /* PortfolioItemService.getAllFiltered('?order=' + this.order)
             .then((res) => {
                 this.item = res[0]
-            })
+            }) */
     },
     unmount() {
         clearAllBodyScrollLocks()
